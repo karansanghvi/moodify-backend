@@ -7,8 +7,8 @@
       }
     ],
     "env": {
-      "SPOTIFY_CLIENT_ID": "@spotify-client-id",
-      "SPOTIFY_CLIENT_SECRET": "@spotify-client-secret"
+      "SPOTIFY_CLIENT_ID": "@SPOTIFY_CLIENT_ID",
+      "SPOTIFY_CLIENT_SECRET": "@SPOTIFY_CLIENT_SECRET"
     }
   }
   
