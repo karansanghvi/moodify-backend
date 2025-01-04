@@ -1,5 +1,6 @@
 const express = require("express");
 const axios = require("axios");
+const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
@@ -7,6 +8,8 @@ const PORT = 5000;
 
 const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
 const CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET;
+
+app.use(cors({origin: "http://localhost:3000"}))
 
 // get access token
 const getAccessToken = async () => {
