@@ -9,7 +9,13 @@ const PORT = 5000;
 const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
 const CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET;
 
-app.use(cors({origin: "https://moodify-livid-six.vercel.app/"}))
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "https://moodify-livid-six.vercel.app");
+    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+    res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    next();
+});
+
 
 // get access token
 const getAccessToken = async () => {
