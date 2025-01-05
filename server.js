@@ -12,7 +12,7 @@ const CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET;
 // Use CORS middleware
 app.use(
   cors({
-    origin: "https://moodify-livid-six.vercel.app",
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
